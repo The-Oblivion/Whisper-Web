@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>FutureSec - Cybersecurity Solutions</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="hero">
+      <div class="container">
+        <h1>FutureSec</h1>
+        <p>Next-generation cybersecurity solutions</p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </section>
+    
+    <section id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>Choose from our range of advanced cybersecurity services:</p>
+        <ul>
+          <li>Network Security</li>
+          <li>Data Encryption</li>
+          <li>Threat Intelligence</li>
+          <li>Vulnerability Assessment</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p>Check out our subscription plans:</p>
+        <ul>
+          <li>Basic - $9.99/month</li>
+          <li>Advanced - $19.99/month</li>
+          <li>Premium - $29.99/month</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Get in touch with our experts:</p>
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 FutureSec. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
