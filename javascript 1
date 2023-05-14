@@ -1,0 +1,50 @@
+// Function to handle form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
+  // Retrieve form values
+  const name = document.querySelector('input[name="name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+  
+  // Perform validation
+  if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+    alert('Please fill in all fields.');
+    return;
+  }
+  
+  // Send form data to the server (you can implement your own server-side logic)
+  const formData = {
+    name: name,
+    email: email,
+    message: message
+  };
+  
+  // Make a fetch request to the server
+  fetch('/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle server response
+    if (data.success) {
+      alert('Form submitted successfully!');
+      // Clear form fields
+      document.querySelector('input[name="name"]').value = '';
+      document.querySelector('input[name="email"]').value = '';
+      document.querySelector('textarea[name="message"]').value = '';
+    } else {
+      alert('Form submission failed. Please try again.');
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred during form submission:', error);
+    alert('An error occurred during form submission. Please try again later.');
+  });
+}
+
+// Add event listener to the form submit button
+document.querySelector('form').addEventListener('submit', handleFormSubmit);
